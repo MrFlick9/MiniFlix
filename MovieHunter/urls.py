@@ -24,8 +24,7 @@ urlpatterns = [
     url(r'^movie/', include('movie.urls')),
     url(r'^user/', include('user.urls')),
     url(r'^$', views.index, name='index'),
-    url(r'.*', lambda request: render(request, '404.html'), name='404'),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    url(r'.*', lambda request: render(request, '404.html'), name='404')
+   
 ]
 
